@@ -3,28 +3,19 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navMenu = document.querySelector('nav ul');
+    const navList = document.querySelector('.nav-list');
     
     if (mobileMenuToggle) {
         mobileMenuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
+            navList.classList.toggle('active');
             mobileMenuToggle.classList.toggle('active');
         });
     }
     
-    // Handle top bar and header positioning
-    const topBar = document.querySelector('.top-bar');
+    // Make sure header is sticky
     const header = document.querySelector('header');
-    
-    // Ensure the top bar is visible
-    topBar.style.display = 'block';
-    
-    // Set up the header position
     header.style.position = 'sticky';
     header.style.top = '0';
-    
-    // Add a class to the body to indicate the top bar is present
-    document.body.classList.add('has-top-bar');
     
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
@@ -38,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (targetElement) {
                 // Close mobile menu if open
-                if (navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
+                if (navList.classList.contains('active')) {
+                    navList.classList.remove('active');
                     mobileMenuToggle.classList.remove('active');
                 }
                 

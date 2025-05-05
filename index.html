@@ -76,69 +76,41 @@
     </script>
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-bar-container">
-                <div class="contact-info">
-                    <div class="contact-info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>123 Water Street, St. John's, NL A1C 1A1</span>
-                    </div>
-                    <div class="contact-info-item">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+17095551234">(709) 555-1234</a>
-                    </div>
-                    <div class="contact-info-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:info@pristineridesnl.com">info@pristineridesnl.com</a>
-                    </div>
-                </div>
-                <div class="social-links-top">
-                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="header-container">
-                <div class="logo">
-                    <img src="images/logo-white.png" alt="Pristine Rides NL Logo">
+        <div class="header-main container">
+            <div class="address-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <p>123 Water Street, St. John's, NL A1C 1A1</p>
+                    </div>
                 </div>
-                
-                <div class="mobile-menu-toggle">
-                    <i class="fas fa-bars"></i>
+            </div>
+            
+            <div class="logo-center">
+                <img src="images/logo-white.png" alt="Pristine Rides NL Logo">
+            </div>
+            
+            <div class="contact-cta">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+17095551234">(709) 555-1234</a>
                 </div>
-                
-                <nav>
-                    <ul>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#packages">Packages</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#booking" class="btn btn-primary">Book Now</a></li>
-                    </ul>
-                </nav>
+                <a href="#booking" class="btn btn-primary">Book Now</a>
             </div>
         </div>
+        
+        <nav class="nav-bar container">
+            <ul class="nav-list">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
     </header>
-    
-    <!-- Hero Section -->
-    <section class="hero" style="background-image: url('images/hero-bg.jpg');">
-        <div class="hero-content">
-            <h1>Showroom-quality Car Detailing</h1>
-            <p>Professional detailing services in St. John's, Newfoundland. We bring your vehicle back to its pristine condition.</p>
-            <a href="#booking" class="btn btn-primary">Book Now</a>
-            <a href="#services" class="btn btn-secondary">Our Services</a>
-        </div>
-    </section>
     
     <!-- Services Section -->
     <section id="services" class="services">
@@ -146,63 +118,11 @@
             <div class="section-title">
                 <h2>Our Services</h2>
             </div>
-            
-            <div class="row">
-                <div class="col-4">
-                    <div class="service-card">
-                        <img src="images/service-interior.jpg" alt="Interior Detailing">
-                        <div class="service-card-content">
-                            <h3>Interior Detailing</h3>
-                            <p class="service-price">Starting at $129</p>
-                            <p>Complete interior cleaning including steam cleaning, vacuuming, leather conditioning, and sanitization.</p>
-                            <a href="#booking" class="btn btn-primary">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-4">
-                    <div class="service-card">
-                        <img src="images/service-exterior.jpg" alt="Exterior Detailing">
-                        <div class="service-card-content">
-                            <h3>Exterior Detailing</h3>
-                            <p class="service-price">Starting at $149</p>
-                            <p>Hand wash, clay bar treatment, paint correction, polishing, and protective wax application.</p>
-                            <a href="#booking" class="btn btn-primary">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-4">
-                    <div class="service-card">
-                        <img src="images/service-ceramic.jpg" alt="Ceramic Coating">
-                        <div class="service-card-content">
-                            <h3>Ceramic Coating</h3>
-                            <p class="service-price">Starting at $499</p>
-                            <p>Long-lasting protection with professional-grade ceramic coating. Includes paint correction.</p>
-                            <a href="#booking" class="btn btn-primary">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center" style="margin-top: 2rem;">
-                <a href="services.html" class="btn btn-secondary">View All Services</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Packages Section -->
-    <section id="packages" class="packages">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Packages</h2>
-            </div>
-            
             <div class="row">
                 <div class="col-4">
                     <div class="package-card">
                         <div class="package-header">
-                            <h3>Basic Package</h3>
+                            <h3>Interior Detailing</h3>
                             <p class="package-price">$199</p>
                         </div>
                         <div class="package-content">
@@ -220,10 +140,9 @@
                 </div>
                 
                 <div class="col-4">
-                    <div class="package-card featured">
+                    <div class="package-card">
                         <div class="package-header">
-                            <span class="featured-tag">Most Popular</span>
-                            <h3>Full Detail Package</h3>
+                            <h3>Exterior Detailing</h3>
                             <p class="package-price">$299</p>
                         </div>
                         <div class="package-content">
@@ -242,9 +161,10 @@
                 </div>
                 
                 <div class="col-4">
-                    <div class="package-card">
+                    <div class="package-card featured">
                         <div class="package-header">
-                            <h3>Deluxe Package</h3>
+							<span class="featured-tag">Most Popular</span>
+                            <h3>Full Detail Package</h3>
                             <p class="package-price">$499</p>
                         </div>
                         <div class="package-content">
@@ -288,176 +208,6 @@
             </div>
         </div>
     </section>
-    
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Work</h2>
-            </div>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="images/gallery-1.jpg" alt="Before and After Interior Detail">
-                    <div class="gallery-overlay">
-                        <span>Interior Detail</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/gallery-2.jpg" alt="Before and After Exterior Detail">
-                    <div class="gallery-overlay">
-                        <span>Exterior Detail</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/gallery-3.jpg" alt="Before and After Paint Correction">
-                    <div class="gallery-overlay">
-                        <span>Paint Correction</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/gallery-4.jpg" alt="Before and After Headlight Restoration">
-                    <div class="gallery-overlay">
-                        <span>Headlight Restoration</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/gallery-5.jpg" alt="Before and After Engine Bay Cleaning">
-                    <div class="gallery-overlay">
-                        <span>Engine Bay Cleaning</span>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/gallery-6.jpg" alt="Before and After Ceramic Coating">
-                    <div class="gallery-overlay">
-                        <span>Ceramic Coating</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center" style="margin-top: 2rem;">
-                <a href="gallery.html" class="btn btn-secondary">View Full Gallery</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>What Our Customers Say</h2>
-            </div>
-            
-            <div class="testimonial-slider">
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"I couldn't believe the transformation! My 10-year-old car looks like it just rolled off the showroom floor. The team at Pristine Rides NL are true professionals and I won't trust my vehicle with anyone else."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <p>- Michael Thompson</p>
-                    </div>
-                </div>
-                
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"After a long Newfoundland winter, my car was in rough shape. The team at Pristine Rides NL worked their magic and completely restored it. The interior smells fresh and the exterior shine is incredible!"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <p>- Sarah Johnson</p>
-                    </div>
-                </div>
-                
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"I had coffee spilled all over my light-colored seats and thought they were ruined. Pristine Rides NL got them looking brand new again! Their attention to detail is amazing."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <p>- David Williams</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="google-reviews">
-                <h3>Google Reviews</h3>
-                <div class="google-reviews-widget">
-                    <!-- Google Reviews Widget would be embedded here -->
-                    <div class="google-rating">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>5.0 out of 5 based on 47 reviews</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- About Us Section -->
-    <!-- <section id="about" class="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Pristine Rides NL</h2>
-            </div>
-            
-            <div class="row">
-                <div class="col-6">
-                    <div class="about-content">
-                        <h3>Our Story</h3>
-                        <p>Founded in 2018, Pristine Rides NL was born from a passion for automotive excellence and a commitment to providing the highest quality detailing services in Newfoundland and Labrador.</p>
-                        <p>Our founder, John Smith, spent over 15 years working in the automotive industry before deciding to focus exclusively on his true passion: bringing vehicles back to their showroom glory through meticulous detailing.</p>
-                        <p>What started as a mobile detailing service has grown into St. John's premier detailing studio, equipped with state-of-the-art tools and premium products to deliver exceptional results every time.</p>
-                        
-                        <h3>Our Commitment</h3>
-                        <p>At Pristine Rides NL, we believe that every vehicle deserves the highest level of care and attention. We use only premium, environmentally-friendly products and the latest techniques to ensure your vehicle receives the best treatment possible.</p>
-                        <p>Our team is certified and continuously trained in the latest detailing methods to deliver consistent, exceptional results that exceed our customers' expectations.</p>
-                        
-                        <div class="certifications">
-                            <img src="images/cert-1.png" alt="BBB Accreditation">
-                            <img src="images/cert-2.png" alt="Certified Detailer">
-                            <img src="images/cert-3.png" alt="Eco-Friendly Products">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-6">
-                    <div class="about-image">
-                        <img src="images/about-us.jpg" alt="Pristine Rides NL Team">
-                    </div>
-                    
-                    <div class="team">
-                        <h3>Meet Our Team</h3>
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="team-member">
-                                    <img src="images/team-1.jpg" alt="John Smith - Founder">
-                                    <h4>John Smith</h4>
-                                    <p>Founder & Lead Detailer</p>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="team-member">
-                                    <img src="images/team-2.jpg" alt="Emily Davis - Detailer">
-                                    <h4>Emily Davis</h4>
-                                    <p>Senior Detailer</p>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="team-member">
-                                    <img src="images/team-3.jpg" alt="Mike Johnson - Detailer">
-                                    <h4>Mike Johnson</h4>
-                                    <p>Detailer</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
     
     <!-- Contact & Booking Section -->
     <section id="contact" class="contact">
@@ -603,32 +353,28 @@
                         <h4>Quick Links</h4>
                         <ul>
                             <li><a href="#services">Services</a></li>
-                            <li><a href="#packages">Packages</a></li>
-                            <li><a href="#gallery">Gallery</a></li>
-                            <li><a href="#testimonials">Testimonials</a></li>
                             <li><a href="#contact">Contact</a></li>
                             <li><a href="#booking">Book Now</a></li>
+                            <!-- <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li> -->
                         </ul>
                     </div>
                 </div>
                 
                 <div class="col-4">
                     <div class="footer-links">
-                        <h4>Services</h4>
+                        <h4>Detailing Packages</h4>
                         <ul>
-                            <li><a href="services.html#interior">Interior Detailing</a></li>
-                            <li><a href="services.html#exterior">Exterior Detailing</a></li>
-                            <li><a href="services.html#ceramic">Ceramic Coating</a></li>
-                            <li><a href="services.html#paint">Paint Correction</a></li>
-                            <li><a href="services.html#headlight">Headlight Restoration</a></li>
-                            <li><a href="services.html#engine">Engine Bay Cleaning</a></li>
+                            <li><a href="#services">Interior Detailing</a></li>
+                            <li><a href="#services">Exterior Detailing</a></li>
+                            <li><a href="#services">Full Detail Package</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Pristine Rides NL. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+                <p>&copy; 2025 Pristine Rides NL. All Rights Reserved.</p> <!-- | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p> -->
                 <p>Serving St. John's and surrounding areas in Newfoundland and Labrador</p>
             </div>
         </div>
