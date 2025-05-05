@@ -17,6 +17,49 @@ document.addEventListener('DOMContentLoaded', function() {
     header.style.position = 'sticky';
     header.style.top = '0';
     
+    // Adjust logo size on scroll for desktop
+    function adjustLogoOnScroll() {
+        const logoImg = document.querySelector('.logo-center img');
+        if (window.innerWidth > 768) { // Only on desktop
+            if (window.scrollY > 50) {
+                logoImg.style.height = '100px';
+                header.classList.add('scrolled');
+            } else {
+                logoImg.style.height = '180px';
+                header.classList.remove('scrolled');
+            }
+        }
+    }
+    
+    window.addEventListener('scroll', adjustLogoOnScroll);
+    window.addEventListener('resize', adjustLogoOnScroll);
+    
+    // Initial call
+    adjustLogoOnScroll();
+    
+    // Back to top button functionality
+    const backToTopButton = document.getElementById('backToTop');
+    
+    if (backToTopButton) {
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        // Scroll to top when clicked
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+    
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
     
