@@ -33,6 +33,7 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-mobile.css">
     
     <!-- Schema.org Markup -->
     <script type="application/ld+json">
@@ -92,12 +93,16 @@
                 <img src="images/logo-white.png" alt="Pristine Rides NL Logo">
             </div>
             
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
             <div class="contact-cta">
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
                     <a href="tel:+17095551234">(709) 555-1234</a>
                 </div>
-                <a href="#booking" class="btn btn-primary">Book Now</a>
+                <a href="#contact" class="btn btn-primary">Book Now</a>
             </div>
         </div>
         
@@ -106,10 +111,9 @@
                 <li><a href="#services">Detailing Packages</a></li>
 				<li><a href="#contact">Location</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li class="mobile-only"><a href="tel:+17095551234"><i class="fas fa-phone"></i> (709) 555-1234</a></li>
+                <li class="mobile-only"><a href="#contact" class="btn btn-primary">Book Now</a></li>
             </ul>
-            <div class="mobile-menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
         </nav>
     </header>
 
@@ -135,7 +139,7 @@
                                 <li><i class="fas fa-check"></i> Window Cleaning</li>
                                 <li><i class="fas fa-check"></i> Spray Wax Protection</li>
                             </ul>
-                            <a href="#booking" class="btn btn-primary">Book This Package</a>
+                            <a href="#contact" class="btn btn-primary">Book This Package</a>
                         </div>
                     </div>
                 </div>
@@ -156,7 +160,7 @@
                                 <li><i class="fas fa-check"></i> Carpet Shampooing</li>
                                 <li><i class="fas fa-check"></i> Air Vent Cleaning</li>
                             </ul>
-                            <a href="#booking" class="btn btn-primary">Book This Package</a>
+                            <a href="#contact" class="btn btn-primary">Book This Package</a>
                         </div>
                     </div>
                 </div>
@@ -178,13 +182,13 @@
                                 <li><i class="fas fa-check"></i> Fabric Protection</li>
                                 <li><i class="fas fa-check"></i> Ozone Treatment</li>
                             </ul>
-                            <a href="#booking" class="btn btn-primary">Book This Package</a>
+                            <a href="#contact" class="btn btn-primary">Book This Package</a>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="add-ons" style="margin-top: 3rem;">
+            <div class="add-ons" style="padding-top: 3rem;">
                 <h3>Add-on Services</h3>
                 <div class="row" style="margin-top: 1.5rem;">
                     <div class="col-4">
@@ -355,7 +359,7 @@
                         <ul>
                             <li><a href="#services">Services</a></li>
                             <li><a href="#contact">Contact</a></li>
-                            <li><a href="#booking">Book Now</a></li>
+                            <li><a href="#contact">Book Now</a></li>
                             <!-- <li><a href="privacy.html">Privacy Policy</a></li>
                             <li><a href="terms.html">Terms of Service</a></li> -->
                         </ul>

@@ -4,11 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navList = document.querySelector('.nav-list');
+    const navBar = document.querySelector('.nav-bar');
     
     if (mobileMenuToggle) {
         mobileMenuToggle.addEventListener('click', function() {
             navList.classList.toggle('active');
             mobileMenuToggle.classList.toggle('active');
+            navBar.classList.toggle('active');
         });
     }
     
@@ -17,25 +19,44 @@ document.addEventListener('DOMContentLoaded', function() {
     header.style.position = 'sticky';
     header.style.top = '0';
     
-    // Adjust logo size on scroll for desktop
-    function adjustLogoOnScroll() {
-        const logoImg = document.querySelector('.logo-center img');
-        if (window.innerWidth > 768) { // Only on desktop
-            if (window.scrollY > 50) {
-                logoImg.style.height = '100px';
-                header.classList.add('scrolled');
-            } else {
-                logoImg.style.height = '180px';
-                header.classList.remove('scrolled');
-            }
+    // Adjust logo size on scroll for desktop with hysteresis
+    const ADD_Y = 120;      // scrollY > 120px → shrink
+    const REMOVE_Y = 40;    // scrollY <= 40px → expand
+    let isScrolled = false; // Track current state
+    let ticking = false;    // For requestAnimationFrame throttling
+    
+    function onScroll() {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const y = window.scrollY;
+                
+                if (window.innerWidth > 768) { // Only on desktop
+                    if (!isScrolled && y > ADD_Y) {
+                        // Scrolling down past the ADD threshold
+                        header.classList.add('scrolled');
+                        isScrolled = true;
+                    } else if (isScrolled && y <= REMOVE_Y) {
+                        // Scrolling up past the REMOVE threshold
+                        header.classList.remove('scrolled');
+                        isScrolled = false;
+                    }
+                }
+                
+                ticking = false;
+            });
+            
+            ticking = true;
         }
     }
     
-    window.addEventListener('scroll', adjustLogoOnScroll);
-    window.addEventListener('resize', adjustLogoOnScroll);
+    window.addEventListener('scroll', onScroll);
+    window.addEventListener('resize', onScroll);
     
     // Initial call
-    adjustLogoOnScroll();
+    if (window.scrollY > ADD_Y) {
+        header.classList.add('scrolled');
+        isScrolled = true;
+    }
     
     // Back to top button functionality
     const backToTopButton = document.getElementById('backToTop');

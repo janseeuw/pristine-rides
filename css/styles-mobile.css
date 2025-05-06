@@ -1,0 +1,67 @@
+/* Mobile header styles */
+@media (max-width: 767px) {
+  /* Make header taller on mobile for better logo visibility */
+  .header-main {
+    grid-template-columns: auto 1fr auto;
+    row-gap: 0;
+    padding: var(--space-3) var(--space-3);
+    height: 120px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Hide contact info on mobile - will be in menu */
+  .contact-cta {
+    display: none;
+  }
+  
+  /* Larger logo on mobile */
+  .logo-center {
+    order: 0;
+    text-align: left;
+  }
+  
+  .logo-center img {
+    height: 80px;
+    max-height: 80px;
+  }
+  
+  /* Position hamburger menu next to logo */
+  .mobile-menu-toggle {
+    position: static;
+    order: 1;
+    transform: none;
+    margin-left: auto;
+  }
+  
+  /* Hide nav-bar container by default */
+  .nav-bar {
+    display: none;
+  }
+  
+  /* Show nav-bar when menu is active */
+  .nav-bar.active {
+    display: block;
+  }
+  
+  /* Show mobile-only elements in nav menu */
+  .mobile-only {
+    display: block;
+  }
+  
+  /* Style mobile menu items */
+  .nav-list .mobile-only a.btn {
+    margin: var(--space-3);
+    text-align: center;
+    display: block;
+    background-color: var(--accent-orange);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
